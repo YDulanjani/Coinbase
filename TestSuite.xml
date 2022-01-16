@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CoinbaseTestSuite" >
+    <test name="CoinbaseTests" >
+        <classes>
+            <class name="com.yamuna.crypto.service.CryptoServiceTest"></class>
+        </classes>
+    </test>
+</suite>
