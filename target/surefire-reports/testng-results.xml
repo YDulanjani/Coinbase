@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-16T16:36:32Z" name="Surefire suite" finished-at="2022-01-16T16:36:35Z" duration-ms="3013">
+    <groups>
+    </groups>
+    <test started-at="2022-01-16T16:36:32Z" name="Surefire test" finished-at="2022-01-16T16:36:35Z" duration-ms="3013">
+      <class name="com.yamuna.crypto.service.CryptoServiceTest">
+        <test-method signature="addCoin()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:32Z" name="addCoin" finished-at="2022-01-16T22:06:35Z" duration-ms="2592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCoin -->
+        <test-method signature="getAllCoins()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:35Z" name="getAllCoins" finished-at="2022-01-16T22:06:35Z" duration-ms="71" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCoins -->
+        <test-method signature="testBuyCoin()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:35Z" name="testBuyCoin" finished-at="2022-01-16T22:06:35Z" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuyCoin -->
+        <test-method signature="testGetAllTransactions()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:35Z" name="testGetAllTransactions" finished-at="2022-01-16T22:06:35Z" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllTransactions -->
+        <test-method signature="testSellCoin()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:35Z" name="testSellCoin" finished-at="2022-01-16T22:06:35Z" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSellCoin -->
+        <test-method signature="testUpdateCoinTransaction()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:35Z" name="testUpdateCoinTransaction" finished-at="2022-01-16T22:06:35Z" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateCoinTransaction -->
+        <test-method signature="updateCoin()[pri:0, instance:com.yamuna.crypto.service.CryptoServiceTest@1ab3a8c8]" started-at="2022-01-16T22:06:35Z" name="updateCoin" finished-at="2022-01-16T22:06:35Z" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCoin -->
+      </class> <!-- com.yamuna.crypto.service.CryptoServiceTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
