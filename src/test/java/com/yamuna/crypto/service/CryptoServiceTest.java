@@ -1,27 +1,38 @@
 package com.yamuna.crypto.service;
 
+
 import com.yamuna.crypto.dao.Coins;
 import com.yamuna.crypto.dao.Transactions;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.testng.Assert;
+import org.junit.Before;
+
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-
-
 public class CryptoServiceTest {
 
-    public static String BASE_URL = "http://localhost:8080";
+    public static String BASE_URL = "http://localhost:3030";
+
+    @Before
+    public void setUp() {
+        RestAssured.baseURI = BASE_URL;
+    }
 
     @Test
     public void addCoin() {
-        RestAssured.baseURI = BASE_URL;
         given().urlEncodingEnabled(false)
                 .body(new Coins(1L, "BTC", 8000.0, "Bitcoin"))
                 .contentType(ContentType.JSON)
-                .post("/crypto/coins")
+                .post(BASE_URL+"/crypto/coins")
+                .then()
+                .statusCode(200);
+
+        given().urlEncodingEnabled(false)
+                .body(new Coins(2L, "ETH", 5000.0, "Etherium"))
+                .contentType(ContentType.JSON)
+                .post(BASE_URL+"/crypto/coins")
                 .then()
                 .statusCode(200);
     }
