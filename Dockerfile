@@ -1,4 +1,4 @@
-FROM maven:3.3.9-jdk-8-alpine
+FROM maven:3.8.4-jdk-8-slim
 WORKDIR /opt
 ENV PORT 3030
 EXPOSE 3030
