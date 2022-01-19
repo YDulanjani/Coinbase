@@ -13,7 +13,7 @@ pipeline {
             jdk 'jdk8'
     }
     stages {
-        stage ('Initialize') {
+        stage ('Initializee') {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
