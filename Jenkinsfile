@@ -10,15 +10,15 @@ pipeline {
 
     tools {
             maven 'Maven 3.8.4'
-//             jdk 'jdk8'
+            docker 'MyDocker'
     }
     stages {
-         stage ('InitializeD') {
-
-                   def dockerHome = tool 'MyDocker'
-                   env.PATH = "${dockerHome}/bin:${M2_HOME}/bin:${env.PATH}"
-
-                }
+//          stage ('InitializeD') {
+//
+//                    def dockerHome = tool 'MyDocker'
+//                    env.PATH = "${dockerHome}/bin:${M2_HOME}/bin:${env.PATH}"
+//
+//                 }
 
 
         stage ('Initializee') {
