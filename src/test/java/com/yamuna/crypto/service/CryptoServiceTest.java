@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 
 public class CryptoServiceTest {
 
-    public static String BASE_URL = "http://localhost:3030";
+    public static String BASE_URL = "http://localhost:8080";
 
     @Before
     public void setUp() {
