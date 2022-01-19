@@ -14,10 +14,10 @@ pipeline {
     }
     stages {
          stage ('InitializeD') {
-                    steps {
-                       def dockerHome = tool 'MyDocker'
-                       env.PATH = "${dockerHome}/bin:${M2_HOME}/bin:${env.PATH}"
-                    }
+
+                   def dockerHome = tool 'MyDocker'
+                   env.PATH = "${dockerHome}/bin:${M2_HOME}/bin:${env.PATH}"
+
                 }
 
 
