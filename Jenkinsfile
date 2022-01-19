@@ -18,7 +18,7 @@ pipeline {
         stage ('Run Test Suite') {
             steps {
                 script {
-                bat 'mvn clean install -DCoinbaseTestSuite'
+                sh 'mvn clean install -DCoinbaseTestSuite'
                 }
             }
         }
