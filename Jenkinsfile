@@ -13,6 +13,14 @@ pipeline {
 //             jdk 'jdk8'
     }
     stages {
+         stage ('Initializee') {
+                    steps {
+                       def dockerHome = tool 'MyDocker'
+                       env.PATH = "${dockerHome}/bin:${M2_HOME}/bin:${env.PATH}"
+                    }
+                }
+
+
         stage ('Initializee') {
             steps {
                 sh '''
