@@ -10,7 +10,7 @@ pipeline {
 
     tools {
             maven 'Maven 3.8.4'
-            docker 'MyDocker'
+            dockerTool 'MyDocker'
     }
     stages {
 //          stage ('InitializeD') {
