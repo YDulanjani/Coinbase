@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to coinbase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Here are the available crypto currencies in coinbase">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <style>
+        body {background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-electronic-technology-website-texture-background-banner-image_156039.jpg);background-repeat:no-repeat;background-position:top left;background-attachment:fixed;background-size: cover}
+        h1{font-family:Arial, sans-serif;color:#000000; text-align: center}
+        p {font-family:Georgia, serif;font-size:16px;font-style:normal;font-weight:normal;color:#000000;}
+        form {
+            border-style: solid;
+            border-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+<h1 >Welcome to Coinbase</h1>
+<h4 class="py-6">Here are the available Transacrtions</h4>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Coin </th>
+        <th> Amount </th>
+        <th> Type </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="''+${transactions.isEmpty()}+''">
+        <td colspan="4"> No Transactions Available </td>
+    </tr>
+    <tr th:each="transaction : ${transactions}">
+        <td><span th:text="${transaction.id}"> ID </span></td>
+        <td><span th:text="${transaction.coin}"> Coin </span></td>
+        <td><span th:text="${transaction.amount}"> Amount </span></td>
+        <td><span th:text="${transaction.type}"> Type </span></td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<div style="float: left; width: 50%">
+    <h4 class="py-6">Buy</h4>
+    <form method="post" th:action="@{/crypto/buy}" th:object="${transaction}" class="col card p-3 mb-5" >
+        <div class="form-group">
+            <label for="Coin">Coin</label>
+            <input id="Coin" placeholder="Enter Coin" required type="text" th:field="*{coin}"
+                   class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="Amount">Amount</label>
+            <input id="Amount" placeholder="Enter Amount" required type="number" th:field="*{amount}"
+                   class="form-control"/>
+        </div>
+
+        <input type="submit" value="Buy">
+    </form>
+</div>
+
+
+<div style="float: right; width: 50%">
+    <h4 class="py-6">Sell</h4>
+    <form method="post" th:action="@{/crypto/sell}" th:object="${transaction}" class="col card p-3 mb-5" >
+        <div class="form-group">
+            <label for="SellCoin">Coin</label>
+            <input id="SellCoin" placeholder="Enter Coin" required type="text" th:field="*{coin}"
+                   class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="SellRate">Amount</label>
+            <input id="SellRate" placeholder="Enter Amount" required type="number" th:field="*{amount}"
+                   class="form-control"/>
+        </div>
+
+        <input type="submit" value="Sell">
+    </form>
+</div>
+
+<div style="float: right; width: 50%">
+    <form method="get" th:action="@{/crypto/coins}" class="col card p-3 mb-5" >
+        <input class="btn btn-primary" type="submit" value="Back to Coins Dashboard">
+    </form>
+</div>
+
+</body>
+</html>

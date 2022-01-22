@@ -72,8 +72,6 @@ pipeline {
                         kubeconfigId: 'mykubeconfig',
                         enableConfigSubstitution: true
                         )
-                    bat 'kubectl apply -f kube'
-
                 }
             }
         }

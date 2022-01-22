@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Welcome to coinbase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Here are the available crypto currencies in coinbase">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <style>
+        body {background-image:url(https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-electronic-technology-website-texture-background-banner-image_156039.jpg);background-repeat:no-repeat;background-position:top left;background-attachment:fixed;background-size: cover}
+        h1{font-family:Arial, sans-serif;color:#000000; text-align: center}
+        p {font-family:Georgia, serif;font-size:16px;font-style:normal;font-weight:normal;color:#000000;}
+        form {
+            border-style: solid;
+            border-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+<h1 >Welcome to Coinbase</h1>
+<h4 class="py-6">Here are the available Crypto Currencies</h4>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Rate </th>
+        <th> Description </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="''+${coins.isEmpty()}+''">
+        <td colspan="4"> No Coins Available </td>
+    </tr>
+    <tr th:each="coin : ${coins}">
+        <td><span th:text="${coin.id}"> ID </span></td>
+        <td><span th:text="${coin.name}"> Name </span></td>
+        <td><span th:text="${coin.rate}"> Rate </span></td>
+        <td><span th:text="${coin.description}"> Description </span></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<h4 class="py-6">Add New Coins</h4>
+<div style="float: left; width: 50%">
+<form method="post" th:action="@{/crypto/coins}" th:object="${coin}" class="col card p-3 mb-5" >
+    <div class="form-group">
+        <label for="Name">Coin Name</label>
+        <input id="Name" placeholder="Enter Coin Name" required type="text" th:field="*{name}"
+               class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="Rate">Market Rate</label>
+        <input id="Rate" placeholder="Enter Market Rate" required type="number" th:field="*{rate}"
+               class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input id="Description" placeholder="Enter Description" required type="text" th:field="*{description}"
+               class="form-control"/>
+    </div>
+
+    <input type="submit" value="Create Coin">
+</form>
+</div>
+
+<div style="float: right; width: 50%">
+    <form method="get" th:action="@{/crypto/transactions}" class="col card p-3 mb-5" >
+        <input class="btn btn-primary" type="submit" value="Manage Transactions">
+    </form>
+</div>
+</body>
+</html>
