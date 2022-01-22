@@ -70,11 +70,9 @@ pipeline {
                 script {
                     kubernetesDeploy(
                         configs: 'kube/Coinbase.yaml',
-                        kubeconfigId: 'mykubeconfig',
+                        kubeconfigId: 'KubeConfigYam',
                         enableConfigSubstitution: true
                         )
-                    bat 'kubectl apply -f kube'
-
                 }
             }
         }
