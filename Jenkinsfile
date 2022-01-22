@@ -69,7 +69,7 @@ pipeline {
                 script {
                     kubernetesDeploy(
                         configs: 'kube/Coinbase.yaml',
-                        kubeconfigId: 'mykubeconfig',
+                        kubeconfigId: 'kubeconfigYamuna',
                         enableConfigSubstitution: true
                         )
                 }

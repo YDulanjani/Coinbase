@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Sun Jan 23 01:27:46 IST 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-835d-bb75-000008174af8 
-on database directory memory:/Users/yamuna/MSc/CloudComputing/Coinbase/Coinbase/7ae76192-4fe6-433e-bf44-16f49ec47237 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
-Loaded from file:/Users/yamuna/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Sun Jan 23 05:28:43 IST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-843a-5788-000001578460 
+on database directory memory:/home/sandun/Documents/CC/Coinbase/0da88556-9ea6-40b0-9370-3afb12120640 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
+Loaded from file:/home/sandun/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_202-b08
-user.dir=/Users/yamuna/MSc/CloudComputing/Coinbase/Coinbase
-os.name=Mac OS X
-os.arch=x86_64
-os.version=10.16
+java.runtime.version=17.0.1+12-LTS-39
+user.dir=/home/sandun/Documents/CC/Coinbase
+os.name=Linux
+os.arch=amd64
+os.version=5.13.0-27-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
