@@ -35,10 +35,6 @@ pipeline {
         stage ('checkout') {
             steps {
             checkout([$class: 'GitSCM', branches: [[name: '*/dev']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/YDulanjani/Coinbase']]])
-//              script {
-//                   env.TAG_ON_DOCKER_HUB = input message: 'User input required',
-//                       parameters: [choice(name: 'Tag on Docker Hub', choices: 'no\nyes', description: 'Choose "yes" if you want to deploy this build')]
-//              }
 
             }
 
@@ -46,13 +42,6 @@ pipeline {
         }
 
         stage ('Run Test Suite') {
-//             when {
-//                  environment name: 'TAG_ON_DOCKER_HUB', value: 'yes'
-//             }
-
-            input{
-                message "Do you want to Run Test Suite?"
-            }
             steps {
                 script {
                 sh 'mvn clean install -DCoinbaseTestSuite'
@@ -80,6 +69,9 @@ pipeline {
         }
 
         stage ('K8S Deploy') {
+            input{
+                message "Do you want to Deploy the latest dockerImage?"
+            }
             steps {
                 script {
                     kubernetesDeploy(
