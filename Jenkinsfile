@@ -49,7 +49,6 @@ pipeline {
             when {
                     environment name: 'TAG_ON_DOCKER_HUB', value: 'yes'
                   }
-            input "Run Tests?"
             steps {
                 script {
                 sh 'mvn clean install -DCoinbaseTestSuite'
