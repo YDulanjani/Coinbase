@@ -37,7 +37,7 @@ public class CryptoController {
         return "redirect:/crypto/coins";
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value="/coins/update")
+    @RequestMapping(method = RequestMethod.POST, value="/coins/update")
     public void updateCoin(@RequestBody Coins coin){
         cryptoService.updateCoin(coin);
     }
