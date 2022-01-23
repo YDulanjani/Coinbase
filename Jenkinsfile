@@ -65,6 +65,9 @@ pipeline {
         }
 
         stage ('K8S Deploy') {
+            input{
+                message "Do you want to Deploy the latest dockerImage?"
+            }
             steps {
                 script {
                     kubernetesDeploy(

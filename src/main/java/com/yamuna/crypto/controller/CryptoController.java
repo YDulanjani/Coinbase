@@ -38,8 +38,9 @@ public class CryptoController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/coins/update")
-    public void updateCoin(@RequestBody Coins coin){
+    public String updateCoin(@RequestBody Coins coin){
         cryptoService.updateCoin(coin);
+        return "redirect:/crypto/coins";
     }
 
 //    @RequestMapping(method = RequestMethod.POST, value="/buy")
