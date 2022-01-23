@@ -32,4 +32,5 @@ spec:
   ports:
     - port: 3030
       targetPort: 3030
+      NodePort: 3003
   type: LoadBalancer
