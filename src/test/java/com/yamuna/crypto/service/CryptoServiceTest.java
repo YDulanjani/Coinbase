@@ -10,9 +10,11 @@ import io.restassured.http.ContentType;
 import org.junit.Before;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
@@ -20,7 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-
+@RunWith(MockitoJUnitRunner.class)
 public class CryptoServiceTest {
 
     @InjectMocks
