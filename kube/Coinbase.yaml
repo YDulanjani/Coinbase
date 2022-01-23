@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 3030
           imagePullPolicy: Always
-#          command: ["/bin/sh", "-ec", "sleep 1000"]
+          command: ["/bin/sh", "-ec", "sleep 1000"]
 ---
 # ... Service YAML definition
 apiVersion: v1
