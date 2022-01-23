@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 
-class CoinbaseApplicationTest {
+public class CoinbaseApplicationTest {
 
     public static String BASE_URL = "http://localhost:3030";
 
