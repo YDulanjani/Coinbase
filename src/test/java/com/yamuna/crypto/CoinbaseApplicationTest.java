@@ -25,14 +25,14 @@ public class CoinbaseApplicationTest {
     @Test
     public void addCoin() {
         given().urlEncodingEnabled(false)
-                .body(new Coins(1L, "BTC", 8000.0, "Bitcoin"))
+                .body(new Coins("BTC", 8000.0, "Bitcoin"))
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/coins")
                 .then()
                 .statusCode(302);
 
         given().urlEncodingEnabled(false)
-                .body(new Coins(2L, "ETH", 5000.0, "Etherium"))
+                .body(new Coins("ETH", 5000.0, "Etherium"))
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/coins")
                 .then()
@@ -59,7 +59,7 @@ public class CoinbaseApplicationTest {
     @Test
     public void testBuyCoin() {
         given().urlEncodingEnabled(false)
-                .body(new Transactions(1L, "BTC", 5L, "BUY", 10L))
+                .body(new Transactions("BTC", 5L, "BUY", 10L))
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/buy")
                 .then()

@@ -22,6 +22,12 @@ public class Coins {
     public Coins() {
     }
 
+    public Coins(String name, Double rate, String description) {
+        this.name = name;
+        this.rate = rate;
+        this.description = description;
+    }
+
     public Coins(Long id, String name, Double rate, String description) {
         this.id = id;
         this.name = name;

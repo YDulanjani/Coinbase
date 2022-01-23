@@ -29,6 +29,13 @@ public class Transactions {
         this.userId = userId;
     }
 
+    public Transactions(String coin, Long amount, String type, Long userId) {
+        this.coin = coin;
+        this.amount = amount;
+        this.type = type;
+        this.userId = userId;
+    }
+
     public String getCoin() {
         return coin;
     }
