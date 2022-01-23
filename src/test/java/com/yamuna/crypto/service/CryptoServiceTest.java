@@ -27,14 +27,14 @@ public class CryptoServiceTest {
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/coins")
                 .then()
-                .statusCode(200);
+                .statusCode(302);
 
         given().urlEncodingEnabled(false)
                 .body(new Coins(2L, "ETH", 5000.0, "Etherium"))
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/coins")
                 .then()
-                .statusCode(200);
+                .statusCode(302);
     }
 
 
@@ -61,7 +61,7 @@ public class CryptoServiceTest {
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/buy")
                 .then()
-                .statusCode(200);
+                .statusCode(302);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class CryptoServiceTest {
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/sell")
                 .then()
-                .statusCode(200);
+                .statusCode(302);
     }
 
     @Test
