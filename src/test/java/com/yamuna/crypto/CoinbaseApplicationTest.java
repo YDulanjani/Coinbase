@@ -83,18 +83,18 @@ public class CoinbaseApplicationTest {
                 .contentType(ContentType.JSON)
                 .post(BASE_URL+"/crypto/update")
                 .then()
-                .statusCode(200);
+                .statusCode(302);
     }
 
-//    @Test
-//    public void testCancelTransaction() {
-//        given().urlEncodingEnabled(false)
-//                .body(new Transactions(1L, "BTC", 6L, "SELL", 8L))
-//                .contentType(ContentType.JSON)
-//                .delete(BASE_URL+"/crypto/cancel")
-//                .then()
-//                .statusCode(200);
-//    }
+    @Test
+    public void testCancelTransaction() {
+        given().urlEncodingEnabled(false)
+                .body(new Transactions(1L, "BTC", 6L, "SELL", 8L))
+                .contentType(ContentType.JSON)
+                .delete(BASE_URL+"/crypto/cancel")
+                .then()
+                .statusCode(200);
+    }
 
     @Test
     public void testGetAllTransactions() {

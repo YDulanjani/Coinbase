@@ -67,7 +67,7 @@ public class CryptoController {
 
 
     @RequestMapping(method = RequestMethod.GET, value="/transactions")
-    public String sellCoin(Model model){
+    public String getTransactions(Model model){
         List<Transactions> allTransactions = cryptoService.getAllTransactions();
         model.addAttribute("transactions", allTransactions);
         model.addAttribute("transaction", new Transactions());
@@ -75,8 +75,9 @@ public class CryptoController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/update")
-    public void updateTransaction(@RequestBody Transactions transaction){
+    public String updateTransaction(@RequestBody Transactions transaction){
         cryptoService.updateCoinTransaction(transaction);
+        return "redirect:/crypto/transactions";
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value="/cancel")
