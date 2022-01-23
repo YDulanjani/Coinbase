@@ -3,6 +3,8 @@
     <test name="CoinbaseTests" >
         <classes>
             <class name="com.yamuna.crypto.service.CryptoServiceTest"></class>
+            <class name="com.yamuna.crypto.CoinbaseApplicationTest"></class>
+
         </classes>
     </test>
 </suite>
